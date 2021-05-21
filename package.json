@@ -1,0 +1,24 @@
+{
+  "name": "@mrewers/pm",
+  "version": "0.0.1",
+  "description": "Project management software",
+  "main": "index.js",
+  "author": "Marek Rewers",
+  "license": "MIT",
+  "scripts": {
+    "build": "rescript",
+    "clean": "rescript clean -with-deps",
+    "start": "rescript build -w"
+  },
+  "devDependencies": {
+    "rescript": "^9.1.2"
+  },
+  "keywords": [
+    "rescript"
+  ],
+  "dependencies": {
+    "@rescript/react": "^0.10.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

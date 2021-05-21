@@ -1,0 +1,10 @@
+# Build Artifacts
+.bsb.lock
+.merlin
+lib/
+
+# Dependencies
+node_modules/
+
+# Transpiled Files
+*.bs.js
