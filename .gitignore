@@ -1,6 +1,7 @@
 # Build Artifacts
 .bsb.lock
 .merlin
+build/
 lib/
 
 # Dependencies
