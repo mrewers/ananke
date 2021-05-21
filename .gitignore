@@ -7,5 +7,8 @@ lib/
 # Dependencies
 node_modules/
 
+# Local Files
+.vscode/
+
 # Transpiled Files
 *.bs.js
