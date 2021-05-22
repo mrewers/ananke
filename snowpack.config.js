@@ -13,6 +13,7 @@ const config = {
     src: '/dist/'
   },
   plugins: [
+    '@jihchi/plugin-rescript',
     '@snowpack/plugin-postcss',
   ],
 }

@@ -18,6 +18,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@jihchi/plugin-rescript": "^1.0.0",
     "@snowpack/plugin-postcss": "^1.4.0",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
