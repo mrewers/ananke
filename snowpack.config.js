@@ -1,7 +1,8 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 const config = {
   devOptions: {
-    port: 5004
+    port: 5004,
+    tailwindConfig: './tailwind.config.cjs',
   },
   exclude: ['**/*.res'],
   mount: {
@@ -11,6 +12,9 @@ const config = {
     },
     src: '/dist/'
   },
+  plugins: [
+    '@snowpack/plugin-postcss',
+  ],
 }
 
 export default config;
