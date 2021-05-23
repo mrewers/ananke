@@ -4,6 +4,10 @@
   body {
     @apply bg-canvas-light;
   }
+
+  #root {
+    @apply flex flex-col min-h-screen;
+  }
 }
 
 @tailwind components;
