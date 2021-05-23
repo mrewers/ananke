@@ -1,4 +1,6 @@
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   body {
@@ -10,5 +12,16 @@
   }
 }
 
-@tailwind components;
-@tailwind utilities;
+@layer components {
+  .focus-base {
+    @apply border border-transparent rounded focus:outline-none focus:ring;
+  }
+
+  .focus-dark {
+    @apply focus-base focus:border-raisin focus:ring-raisin focus:ring-opacity-50;
+  }
+
+  .focus-light {
+    @apply focus-base focus:border-canvas-light focus:ring-canvas-light focus:ring-opacity-50;
+  }
+}
