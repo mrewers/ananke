@@ -16,6 +16,13 @@ const config = {
     '@jihchi/plugin-rescript',
     '@snowpack/plugin-postcss',
   ],
+  routes: [
+    {
+      match: 'routes',
+      src: '.*',
+      dest: '/index.html',
+    },
+  ],
 }
 
 export default config;
