@@ -1,4 +1,4 @@
 @react.component
 let make = (~id: string) => {
-  <ProjectLayout> <h2> {React.string(`Configure Project ${id}`)} </h2> </ProjectLayout>
+  <Layouts.Project> <h1> {React.string(`Configure Project ${id}`)} </h1> </Layouts.Project>
 }

@@ -1,4 +1,4 @@
 @react.component
 let make = () => {
-  <BaseLayout> {React.string("Page not found")} </BaseLayout>
+  <Layouts.Base> {React.string("Page not found")} </Layouts.Base>
 }

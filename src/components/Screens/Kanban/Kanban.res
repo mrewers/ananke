@@ -19,5 +19,5 @@ let make = (~tickets: array<SwimLane.ticket>) => {
     })
   }
 
-  <ProjectLayout> <div className="flex"> {React.array(content)} </div> </ProjectLayout>
+  <Layouts.Project> <div className="flex"> {React.array(content)} </div> </Layouts.Project>
 }

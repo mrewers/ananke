@@ -6,9 +6,9 @@ let make = (~tickets: array<SwimLane.ticket>) => {
     })
   }
 
-  <ProjectLayout>
+  <Layouts.Project>
     <Column title="Backlog">
       <ul className="flex flex-1 flex-col space-y-4"> {React.array(content)} </ul>
     </Column>
-  </ProjectLayout>
+  </Layouts.Project>
 }
