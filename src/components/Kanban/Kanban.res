@@ -1,16 +1,31 @@
+type lane = {id: string, title: string}
+
 @react.component
 let make = () => {
-  let toDo: array<SwimLane.ticket> = [{id: "1", title: "To Do One"}, {id: "2", title: "To Do Two"}]
-  let progress: array<SwimLane.ticket> = [
-    {id: "3", title: "Working on this"},
-    {id: "4", title: "And Another one"},
-    {id: "6", title: "One More For Good Measure"},
+  let lanes: array<lane> = [
+    {id: "1", title: "To Do"},
+    {id: "2", title: "In Progress"},
+    {id: "3", title: "Testing"},
+    {id: "4", title: "Done"},
   ]
-  let done: array<SwimLane.ticket> = [{id: "5", title: "Done Ticket"}]
 
-  <div className="flex">
-    <SwimLane tickets={toDo} title="To Do" />
-    <SwimLane tickets={progress} title="In Progress" />
-    <SwimLane tickets={done} title="Done" />
-  </div>
+  let tickets: array<SwimLane.ticket> = [
+    {id: "1", lane: "1", title: "To Do One"},
+    {id: "2", lane: "1", title: "To Do Two"},
+    {id: "3", lane: "2", title: "Working on this"},
+    {id: "4", lane: "2", title: "And Another one"},
+    {id: "6", lane: "2", title: "One More For Good Measure"},
+    {id: "5", lane: "4", title: "Done Ticket"},
+  ]
+
+  let content = {
+    Belt.Array.map(lanes, lane => {
+      let inLane = ticket => (ticket: SwimLane.ticket).lane == lane.id
+      let tix = Js.Array.filter(inLane, tickets)
+
+      <SwimLane key={lane.id} tickets={tix} title={lane.title} />
+    })
+  }
+
+  <div className="flex"> {React.array(content)} </div>
 }

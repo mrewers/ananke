@@ -1,4 +1,4 @@
-type ticket = {id: string, title: string}
+type ticket = {id: string, lane: string, title: string}
 
 @react.component
 let make = (~tickets: array<ticket>, ~title: string) => {
